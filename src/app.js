@@ -11,7 +11,7 @@ const numberToGuess = generateRandomNumber();
 
 terminal.question('Guess the number', (userNumber) => {
   if (!checkIsValidUserInput(userNumber)) {
-    return;
+    return 'Input is not a valid 4-digit number';
   }
 
   if (userNumber === numberToGuess) {
