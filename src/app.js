@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 'use strict';
 
 import readline from 'readline';
@@ -11,12 +12,13 @@ const numberToGuess = generateRandomNumber();
 
 terminal.question('Guess the number', (userNumber) => {
   if (!checkIsValidUserInput(userNumber)) {
-    return 'Input is not a valid 4-digit number';
+    console.log('Input is not a valid 4-digit number');
   }
 
   if (userNumber === numberToGuess) {
+    console.log('You guessed the number!');
     terminal.close();
   } else {
-    getBullsAndCows(userNumber, numberToGuess);
+    console.log(getBullsAndCows(userNumber, numberToGuess));
   }
 });

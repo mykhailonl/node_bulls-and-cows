@@ -10,7 +10,7 @@ function generateRandomNumber() {
   const numArr = [Math.floor(Math.random() * 9) + 1];
 
   while (numArr.length < 4) {
-    const newNum = Math.floor(Math.random() * 9);
+    const newNum = Math.floor(Math.random() * 10);
 
     if (!numArr.includes(newNum)) {
       numArr.push(newNum);
